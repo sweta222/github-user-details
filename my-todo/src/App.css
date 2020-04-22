@@ -36,7 +36,8 @@
     transform: rotate(360deg);
   }
 } */
-body {
+
+/* body {
   background: grey;
   font-size: 20px;
 }
@@ -67,4 +68,41 @@ body {
 .btn {
   background-color: green;
   font-style: oblique;
+} */
+.heading {
+  background-color: bisque;
+  padding: 20px;
+  text-align: center;
+  font-size: 25px;
+}
+body {
+  background-color: whitesmoke;
+}
+/* .userid {
+  background-color: thistle;
+  font-size: 20px;
+  text-align: center;
+  margin-left: 400px;
+  margin-right: 800px;
+  height: 38px;
+  display: flex;
+  justify-content: left;
+}
+.fetch {
+  background-color: thistle;
+  font-size: 20px;
+  text-align: center;
+  margin-left: 650px;
+  margin-right: 300px;
+  height: 50px;
+  width: 150px;
+} */
+.search {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0px;
+}
+.card {
+  display: flex;
+  justify-content: center;
 }
