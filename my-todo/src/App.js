@@ -1,74 +1,3 @@
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-// import './App.css';
-// class App extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = { userID: '' };
-//     this.handleChange = this.handleChange.bind(this);
-//     this.handlesubmit = this.handlesubmit.bind(this);
-//   }
-//   handleChange(event) {
-//     this.setState({ userID: event.target.value });
-//   }
-//   handlesubmit(event) {
-//     event.preventDefault();
-//     alert('submitted userID is' + this.state.userID);
-//   }
-//   render() {
-//     return (
-//       <div>
-//         <h1 className="heading">Github User Details</h1>
-//         <form onSubmit={this.handlesubmit}>
-//           <input
-//             type="text"
-//             className="userid"
-//             placeholder="userID"
-//             onChange={this.handleChange}
-//           />
-//           <br />
-//           <br />
-//           <input type="submit" className="fetch" value="fetch details" />
-//         </form>
-//       </div>
-//     );
-//   }
-// }
-// export default App;
-// ReactDOM.render(<App />, document.getElementById('root'));
-
-// import React from 'react';
-// import {useState} from 'react';
-// import './App.css';
-// const App = () => {
-//   const [userID,setuserID] = useState('');
-
-//   const handlesubmit = (event) => {
-//     event.preventDefault();
-//     alert('submitted userID is' + userID);
-//   };
-
-//   render() {
-//     return (
-//       <div>
-//         <h1 className="heading">Github User Details</h1>
-//         <form onSubmit={handlesubmit}>
-//           <input
-//             type="text"
-//             className="userid"
-//             placeholder="userID"
-//             onChange={(event) => setuserID(event.target.value)}
-//           />
-//           <br />
-//           <br />
-//           <input type="submit" className="fetch" value="fetch details" />
-//         </form>
-//       </div>
-//     );
-//   }
-// }
-// export default App;
-
 import React, { useState, useEffect } from 'react';
 import { Form, Card, Image, Icon } from 'semantic-ui-react';
 import './App.css';
@@ -109,10 +38,6 @@ const App = () => {
     setAvatar(avatar_url);
     setEmail(email);
   };
-
-  // const handleSearch = (e) => {
-  //   setUserInput(e.target.value);
-  // };
 
   const handlesubmit = () => {
     fetch(`https://api.github.com/users/${userInput}`)
