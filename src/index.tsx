@@ -10,11 +10,6 @@ import thunk from 'redux-thunk';
 import reducer from './store/reducer';
 import { combinedAction } from './interfaces';
 import { ThunkMiddleware } from 'redux-thunk';
-//import { xProp } from './components/Api';
-// const storeConfig: Store<xProp> = () => {
-//   const store = createStore(reducer, applyMiddleware(thunk));
-//   return store;
-// };
 export type appState = ReturnType<typeof reducer>;
 const store = createStore(
   reducer,
