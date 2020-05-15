@@ -6,6 +6,7 @@ import * as actionCreator from '../store/action';
 import { ChangeEvent } from 'react';
 import { appState } from '..';
 import { DispatchProps } from '../interfaces';
+type Prop = appState & DispatchProps;
 const Api = (props: Prop) => {
   const setUserInput = (e: ChangeEvent<HTMLInputElement>) => {
     props.changeUsername(e);
@@ -63,7 +64,6 @@ const Api = (props: Prop) => {
     </div>
   );
 };
-type Prop = appState & DispatchProps;
 
 const mapStateToProps = (state: appState) => {
   return {
