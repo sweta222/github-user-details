@@ -10,6 +10,7 @@ import thunk from 'redux-thunk';
 import reducer from './store/reducer';
 import { combinedAction } from './interfaces';
 import { ThunkMiddleware } from 'redux-thunk';
+//we can also replace/put initialState in the place of appState bcz the returntype of reducer func is defined same,,so appState=initialState
 export type appState = ReturnType<typeof reducer>;
 const store = createStore(
   reducer,
