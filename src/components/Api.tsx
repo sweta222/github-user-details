@@ -35,7 +35,7 @@ const Api = (props: Prop) => {
             <Image src={props.avatar} />
             <Card.Content>
               <Card.Header>{props.name}</Card.Header>
-              <Card.Header>{props.username}</Card.Header>
+              <Card.Header>{props.loginId}</Card.Header>
               <Card.Header>{props.email}</Card.Header>
             </Card.Content>
             <Card.Content extra>
@@ -67,6 +67,7 @@ const Api = (props: Prop) => {
 
 const mapStateToProps = (state: appState) => {
   return {
+    loginId: state.loginId,
     name: state.name,
     username: state.username,
     email: state.email,

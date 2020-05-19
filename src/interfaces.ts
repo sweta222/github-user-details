@@ -15,6 +15,7 @@ export interface Action2 {
   data: any;
 }
 export interface initialState {
+  loginId: string;
   name: string;
   username: string;
   email: string;

@@ -1,5 +1,6 @@
 import { combinedAction, initialState, CHANGE, SUBMIT } from '../interfaces';
 const initState: initialState = {
+  loginId: '',
   name: '',
   username: '',
   email: '',
@@ -21,6 +22,7 @@ const reducer = (state = initState, action: combinedAction): initialState => {
     if (action.data.public_repos) {
       return {
         ...state,
+        loginId: action.data.login,
         name: action.data.name,
         email: action.data.email,
         repos: action.data.public_repos,
